@@ -39,3 +39,50 @@
     }
   }
 ?>
+
+<!-- html side of things -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/persons.css">
+
+    <!-- css styling -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, button, select, textarea {
+            padding: 12px;
+        }
+
+        /* these are alerts */
+        /* will apply red border when error */
+        .alert {
+            background: red;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .error-border {
+            border-color: red;
+        }
+    </style>
+
+    <!-- title for website -->
+    <title>Form elements</title>
+</head>
+        
+
+</body>
+</html>
