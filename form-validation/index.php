@@ -102,25 +102,15 @@
       class="<?php if($error["name"]): ?> error-border <?php endif ?>"
     >
 
-    <!-- size drop down menu -->
-    <select name="size">
-      <!-- default displayed value -->
-      <option value="0">Choose size</option>
-      
-      <!-- forEach loop for dynamically generating rest of the sizes -->
-      <?php foreach($sizes as $size): ?>
-        <option value="<?= $size["id"] ?>"
-          <?php if($_POST["size"] == $size["id"]): ?>
-            selected
-          <?php endif ?>
-          >
-            <? $size["name"] ?>
-      </option>
-      <?php endforeach ?>
-    </select>
-
+    <!-- note input field -->
+    <textarea 
+      name="note" 
+      placeholder="Note"
+      class="<?php if($error["note"]): ?> error-border <?php endif ?>"
+    ></textarea>
     
-
+    <!-- button to submit form -->
+    <button>Submit</button>
   </form>
 
 </body>
