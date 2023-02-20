@@ -82,7 +82,46 @@
     <!-- title for website -->
     <title>Form elements</title>
 </head>
-        
+<body>
+  
+  <!-- form validation checking -->
+  <?php if($error["name"] || $error["note"]): ?>
+    <!-- alert -->
+    <div class="alert">Form isn't filled up correctly!!!</div>
+  <?php endif ?>
+
+  <!-- form container -->
+  <form action="" method="POST">
+
+    <!-- name input field -->
+    <input
+      type="text"
+      placeholder="Name"
+      name="name"
+      value="<?= $_POST["name"] ?>"
+      class="<?php if($error["name"]): ?> error-border <?php endif ?>"
+    >
+
+    <!-- size drop down menu -->
+    <select name="size">
+      <!-- default displayed value -->
+      <option value="0">Choose size</option>
+      
+      <!-- forEach loop for dynamically generating rest of the sizes -->
+      <?php foreach($sizes as $size): ?>
+        <option value="<?= $size["id"] ?>"
+          <?php if($_POST["size"] == $size["id"]): ?>
+            selected
+          <?php endif ?>
+          >
+            <? $size["name"] ?>
+      </option>
+      <?php endforeach ?>
+    </select>
+
+    
+
+  </form>
 
 </body>
 </html>
