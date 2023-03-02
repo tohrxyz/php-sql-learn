@@ -51,25 +51,34 @@
   <h1>Books:</h1>
 
   <div class="container">
+
+  <!-- dynamically generated cards with for-each loop -->
+  <!-- generates card for every element from $books array -->
     <?php foreach($books as $book): ?>
       <div class="card">
+        
         <div class="bookName"> 
-          Name: <?php echo $book["name"] ?>
+          <!-- this displays "name" element from books array -->
+          Name: <?php echo $book["name"] ?> 
         </div>
 
         <div class="author">
+          <!-- this displays "author" element from books array -->
           Author: <?php echo $book["author"] ?>
         </div>
 
         <div class="releaseDate">
+          <!-- this displays "releaseDate" element from books array -->
           Release date: <?php echo $book["releaseDate"] ?>
         </div>
 
         <div class="price">
+          <!-- this displays "price" element from book array -->
           Price: <?php echo $book["price"] ?>
         </div>
 
       </div>
+    <!-- this is where foreach loop ends -->
     <?php endforeach ?>
   </div>
 </body>
