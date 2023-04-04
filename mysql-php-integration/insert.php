@@ -41,5 +41,12 @@
 <body>
     <?php require_once "Components/HeaderApp.php" ?>
     <h1>Insert</h1>
+
+    <form action="">
+        <input type="text" name="fname" placeholder="First name">
+        <input type="text" name="lname" placeholder="Last name">
+        <input type="number" name="age" placeholder="Age">
+        <input type="submit" value="Insert">
+    </form>
 </body>
 </html>
