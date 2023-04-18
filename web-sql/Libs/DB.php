@@ -2,8 +2,8 @@
     $_DB = [
         "host" => "localhost",
         "login" => "root",
-        "password" => "",
-        "name" => "tiu_2022_2023",
+        "password" => "subzero",
+        "name" => "hrib_db",
         "conn" => null,
     ];
 
