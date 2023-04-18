@@ -26,41 +26,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select</title>
-
-    <style>
-        .card{
-            border-color: red;
-            background: black;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            margin-bottom: 20px;
-            margin-right: 500px;
-            margin-left: 500px;
-        }
-        .button{
-            border-style: solid;
-            border-color: red;
-            text-decoration: none;
-            color: red;
-            padding: 0px 20px 0px 20px;
-        }
-    </style>
 </head>
 <body>
     <?php require_once "Components/HeaderApp.php" ?>
     <h1>Select</h1>
-    
-    <?php 
-        while($row = mysqli_fetch_assoc($res)): ?>
-            <div class="card">
-                <p><?= "NAME: " . $row["fname"]?></p>
-                <p><?= "SURNAME: " . $row["lname"]?></p>
-                <p><?= "AGE: " . $row["age"] . "<br>"?></p>
-                <a href="" class="button">Detail</a>
-                <a href="" class="button">Edit</a>
-                <a href="" class="button">Delete</a>
-            </div>
-        <?php endwhile; ?>
+    <h1><?= $data["fname"] ?></h1>
 </body>
 </html>
