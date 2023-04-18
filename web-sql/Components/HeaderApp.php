@@ -22,7 +22,8 @@
 </style>
 <header>
     <nav>
-        <a href="index.php">Zoznam osob</a>
-        <a href="insert.php">Pridaj osobu</a>
+        <a href="index.php">List everyone</a>
+        <a href="insert.php">Add a person</a>
+        <!-- <a href="detail.php">Person detail</a> -->
     </nav>
 </header>

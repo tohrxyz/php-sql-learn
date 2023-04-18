@@ -29,9 +29,9 @@
 
     <style>
         .card-container {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
             justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
         .card {
             border: 1px solid black;
@@ -56,6 +56,7 @@
                 <div>Name: <?= $person["fname"] ?></div>
                 <div>Surname: <?= $person["lname"] ?></div>
                 <div>Age: <?= $person["age"] ?></div>
+                <a href="detail.php?id=<?= $person["id"] ?>">Detail</a>
             </section>
         <?php endforeach; ?>
     </section>

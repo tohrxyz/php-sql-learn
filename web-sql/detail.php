@@ -40,20 +40,36 @@
             align-items: center;
             max-width: 300px;
         }
+
+        .card-container {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .container{
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
     <?php require_once "Components/HeaderApp.php" ?>
-    <h1>Detail of person</h1>
+    <div class="container">
+        <a href="index.php">Back to list</a>
+    </div>
 
-    <?php if($data == null): ?>
-        <div>Person not found</div>
-    <?php else: ?>
-        <section class="card">
-            <div>Name: <?= $data["fname"] ?></div>
-            <div>Surname: <?= $data["lname"] ?></div>
-            <div>Age: <?= $data["age"] ?></div>
-        </section>
-    <?php endif; ?>
+    
+    <div class="card-container">
+        <h1>Detail of person</h1>
+        <?php if($data == null): ?>
+            <div>Person not found</div>
+        <?php else: ?>
+            <section class="card">
+                <div>Name: <?= $data["fname"] ?></div>
+                <div>Surname: <?= $data["lname"] ?></div>
+                <div>Age: <?= $data["age"] ?></div>
+            </section>
+        <?php endif; ?>
+    </div>
 </body>
 </html>
