@@ -3,27 +3,29 @@
     require_once "Libs/Helper.php";
     require_once "Libs/DB.php";
 
-    // http://localhost/.../insert.php?fname=Tomas&lname=Mastalir&age=41
-    $person = $_POST;
-    $sql = "INSERT INTO
-                persons
-            SET
-                fname=?,
-                lname=?,
-                age=?
-    ";
-    $stmt = mysqli_prepare($_DB['conn'], $sql);
-    mysqli_stmt_bind_param( $stmt, 
-                            "ssi", 
-                            $person["fname"], $person["lname"], $person["age"]
-    );
-    
-    mysqli_stmt_execute($stmt);
-    $res = mysqli_stmt_get_result($stmt);
-    
-    mysqli_stmt_close($stmt);
-    mysqli_close($_DB["conn"]);
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $person = $_POST;
+        $sql = "INSERT INTO
+                    persons
+                SET
+                    fname=?,
+                    lname=?,
+                    age=?
+        ";
+        $stmt = mysqli_prepare($_DB['conn'], $sql);
+        mysqli_stmt_bind_param( $stmt, 
+                                "ssi", 
+                                $person["fname"], $person["lname"], $person["age"]
+        );
+        
+        mysqli_stmt_execute($stmt);
+        $res = mysqli_stmt_get_result($stmt);
+        
+        mysqli_stmt_close($stmt);
+        mysqli_close($_DB["conn"]);
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
