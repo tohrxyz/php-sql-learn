@@ -55,6 +55,10 @@
     }
     mysqli_close($_DB["conn"]);
 
+    if($_POST){
+        header("Location: index.php");
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +70,14 @@
 </head>
 <body>
     <?php require_once "Components/HeaderApp.php" ?>
-    <h1>Insert</h1>
+        
+    <?php if($id): ?>
+        <h1>Update person <?php echo $person["fname"] . " ". $person["lname"] ?></h1>
+    <?php else: ?>
+        <h1>Insert new person</h1>
+    <?php endif; ?>
+
+
     <?php if($message): ?>
         <p><?= $message ?></p>
     <?php endif; ?>
