@@ -58,7 +58,7 @@
                 <div>Age: <?= $person["age"] ?></div>
                 <a href="detail.php?id=<?= $person["id"] ?>">Detail</a>
                 <a href="delete.php?id=<?= $person["id"] ?>">Delete</a>
-                <a href="update.php?id=<?= $person["id"] ?>">Update</a>
+                <a href="person-form.php?id=<?= $person["id"] ?>">Update</a>
             </section>
         <?php endforeach; ?>
     </section>
